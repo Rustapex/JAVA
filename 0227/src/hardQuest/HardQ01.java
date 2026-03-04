@@ -6,12 +6,6 @@ public class HardQ01 {
     static void main(String[] args) {
         double hPop1999 =250.0, kPop1999 = 180.0;
         int year = 1999;
-
-
-
-
-
-
         while(hPop1999 > kPop1999){
             year++;
             hPop1999 *= 1.036;
