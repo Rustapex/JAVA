@@ -26,5 +26,7 @@ public class Q05 {
             default -> result ="다시 입력";
         }
         System.out.println(result);
+
+        sc.close();
     }
 }

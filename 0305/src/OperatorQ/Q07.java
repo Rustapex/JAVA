@@ -13,7 +13,7 @@ public class Q07 {
             } else continue;
         }
         System.out.println("총 합 : " + sum);
-
+        sc.close();
 
     }
 }

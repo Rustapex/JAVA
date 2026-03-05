@@ -17,5 +17,6 @@ public class Q01 {
 
         System.out.printf("%s : %s\n%s : %s\n%s : %d\n%s : %d"
                 , "id", customerId, "name", customerName, "age", customerAge, "weight", customerWeight);
+        sc.close();
     }
 }

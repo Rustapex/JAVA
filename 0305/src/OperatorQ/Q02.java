@@ -1,7 +1,5 @@
 package OperatorQ;
 
-import java.util.*;
-
 public class Q02 {
     /*1~10까지 합 구하기  (for, while문 사용하기)*/
     static void main(String[] args) {

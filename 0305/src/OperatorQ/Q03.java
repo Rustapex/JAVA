@@ -13,5 +13,7 @@ public class Q03 {
         * */
         sum = (num+1) * (long)num / 2;
         System.out.printf("%s %d %s : %d", "1부터 ", num, "까지의 합", sum);
+
+        sc.close();
     }
 }
