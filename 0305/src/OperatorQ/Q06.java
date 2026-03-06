@@ -26,5 +26,14 @@ public class Q06 {
 
         }
 
+        /* while문 안 switch-case에서 while문 탈출 방법
+        * loop : while(
+        *   switch(menu){
+        *       case 1 :
+        *        ...
+        *       default : break loop;
+        *
+        * */
+
     }
 }
