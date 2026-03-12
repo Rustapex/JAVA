@@ -10,10 +10,10 @@ public class Q3052 {
             inputNumber[i] = Integer.parseInt(sc.nextLine());
         }
         int[] remainerSet = getRemainder(inputNumber);
-        int count = countDistinctRemainders(remainerSet);
-        System.out.println(count);
+/*        int count = countDistinctRemainders(remainerSet);*/
+        /*System.out.println(count);
 
-
+*/
     }
     public static int[] getRemainder(int[] inputNumber){
         int[] remainderSet = new int[inputNumber.length];
