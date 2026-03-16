@@ -1,17 +1,28 @@
 package practice;
 
-public class PlaylistMain {
-    public static void main(String[] args) {
-        Playlist playlist = new Playlist();
+/*프로그램 실행 클래스
+* main() 메서드에서 Playlist 객체를 생성
+* 사용자에게 메뉴를 보여주고 선택하게 한다.
+* 메뉴(추가, 삭제, 수정, 조회)를 Playlist 객체에 요청*/
 
+public class PlaylistMain {
+    private final Playlist playlist = new Playlist();
+    public static void main(String[] args) {
+        new PlaylistMain().run();
+
+    }
+    private void run() {
         System.out.println("=== \t플레이리스트\t===");
+
+        /*사용자가 5번 종료를 입력하기 전까지 계속 반복 */
         loop:
         while (true) {
             System.out.println("1.추가 / 2.삭제 / 3.수정 / 4.조회 / 5.종료");
+            /*
+            숫자 입력 검증 : method 내부에서 처리(숫자 입력 범위에 대한 입력검증)
+            문자 입력 검증 : try-catch로 확장 가능(미학습)
+            */
 
-
-            /*나중에 예외처리 배울 때에 숫자가 아닌 다른 자료형이 올 때에 [try - catch]
-            예외처리 해주고 다시 입력받기*/
             int menu = playlist.selectMenu();
             switch (menu) {
                 case 1 -> {

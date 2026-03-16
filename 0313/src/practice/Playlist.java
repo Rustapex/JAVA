@@ -3,11 +3,31 @@ package practice;
 import java.util.Scanner;
 
 
+// 플레이리스트 전체를 관리하는 클래스
+/*
+* - Song 객체들을 배열에 저장한다.[객체배열]
+* - 추가, 수정, 삭제, 조회 기능
+* + 현재는 입력(Scanner)와 메뉴 처리 기능(원래는 Main에서 입력은 받던지 아니면 따로 분리해야 하지만)
+*
+* 객체지향
+* - Song : 노래 1개의 데이터 객체
+* - Playlist : 여러개의 Song 객체를 관리하는 객체
+* */
 public class Playlist {
+    //사용자 입력 위한 Scanner 객체(Playlist 객체 method 내부에서 입력[Scanner] 필요)
     private final Scanner sc = new Scanner(System.in);
+
+    // Song 객체를 저장하는 배열
     private final Song[] songs = new Song[120];
+
+    /* 배열 크기 유한하기 떄문에
+    현재 저장된 곡 개수 = songCount*/
     private int songCount = 0;
 
+    //앨범명과 곡명 기준으로 해당 곡의 index 찾기 method
+    /* - 수정, 삭제 기능에서 사용
+    * - 찾으면 해당 index, 못 찾으면 -1 반환
+    * - Playlist 객체 내부에서만 호출되므로 private */
     private int findSongIndex(String albumName, String songName) {
         for (int i = 0; i < songCount; i++) {
             if (songs[i].getSongName().equals(songName) && songs[i].getAlbumName().equals(albumName)) {
@@ -17,6 +37,10 @@ public class Playlist {
         return -1;
     }
 
+    // 메뉴 입력 검증 method
+    /*- startNum ~ endNum 범위 안에 숫자 입력할 때까지 반복해서 입력 받음
+    - 범위 내의 숫자 입력이 아니라면 다시 입력 검증 / 문자 입력 시에는 보완 필요
+    * */
     private int isValidRangeNumber(int startNum,int endNum){
         while(true){
             int input = Integer.parseInt(sc.nextLine());
@@ -29,11 +53,17 @@ public class Playlist {
         }
     }
 
-
+    //메뉴 입력 검증 method
+    /* - isValidRangeNumber() 호출
+    * - 추후에 run()을 선언하고 안에 기능별로 method 분리하기*/
     public int selectMenu() {
         return isValidRangeNumber(1,5);
     }
 
+    // 추가 메뉴 담당 Method
+    /*- 앨범 / 곡 단위 추가 선택 입력
+    - 선택 결과 따라서 addAlbum() 또는 addSong() 호출
+    * */
     public void addMenu() {
         System.out.println("1. 앨범 추가 / 2. 음악 추가");
         int menu = isValidRangeNumber(1, 2);
@@ -46,6 +76,13 @@ public class Playlist {
 
     }
 
+    //앨범 단위 곡 추가 method
+    /* - 앨범명, 장르, 가수명, 입력할 곡수 입력
+    * -> 배열 남은 공간에 따른 앨범 단위 곡 추가 여부 결정
+    * - 같은 앨범 정보를 공유하는 여러 곡명을 입력 받아 Song 객체를 생성
+    *
+    *   "공통정보 1번(앨범명/장르/가수명) + 곡명 여러번 " 이볅 방식으로
+    *   동 앨범의 여러 곡들을 빠르게 추가하기 위한 기능*/
     private void addAlbum() {
         System.out.println("앨범명 / 장르 / 가수명 / 입력할 곡 개수 순서로 입력");
         System.out.print("앨범명 : ");
@@ -58,9 +95,15 @@ public class Playlist {
         String singer = sc.nextLine();
 
         System.out.print("곡 수 :");
+
+        //추가할 곡 수 검증
+        /* - 1개 이상의 곡 개수 입력(숫자)
+        * - 남은 저장 공간(배열안 빈 공간)을 초과 x
+        * - 조건 만족할 때까지 입력 받음
+        * - 배열 안에 다 찼을 경우에 어떤한 입력을 받아도 무한루프 가능성 있어 개선 필요*/
         int count = 0;
 
-        boolean isValid = false; //
+        boolean isValid = false;
 
         while (!isValid) {
             count = Integer.parseInt(sc.nextLine());
@@ -78,7 +121,11 @@ public class Playlist {
             }
         }
 
-
+        // 입력 검증이 끝난 후 곡명 입력 받기(나중에 분리할수 있으면 분리 필요)
+        /*- 입력받은 곡명마다 Song 객체를 새로 생성 후 배열에 할당 [songCount++ 로 현재 입력중인 index 하나씩 증가해가면서]
+        - 같은 앨범의 곡이므로 앨범명, 장르, 가수명 동일, 곡명만 입력 받음
+        - 곡명만 반복 입력받아 서로 다른 Song 객체를 만든다.
+        * */
         System.out.println("곡명을 입력하세요 ");
         for (int i = 0; i < count; i++) {
             System.out.printf("%d번 곡명 : ", (i + 1));
@@ -93,6 +140,10 @@ public class Playlist {
 
     }
 
+    //곡 단위 곡 추가하는 method
+    /* - 앨범 단위 추가 method와 같이 입력할 곡 개수 입력 받은 후 입력
+    * - 앨범, 곡에 반복되는 구조 있으므로 분리 필요
+    */
     private void addSong() {
         System.out.print("입력할 곡 개수:");
         int count = 0;
@@ -138,6 +189,9 @@ public class Playlist {
 
     }
 
+    //기존 곡 정보를 수정하는 method
+    /* - 수정 대상 곡을 곡명 + 앨범명으로 찾음(동일 곡명에 대한 대비) [findSongIndex()호출]
+    * - 해당 곡 존재하면 새로운 정보로 갱신[updateInfo()호출]*/
     public void editMusic() {
         if (songCount == 0) {
             System.out.print("수정할 곡이 없습니다\n입력 후에 시도하세요.");
@@ -176,6 +230,10 @@ public class Playlist {
 
     }
 
+    //곡 삭제 기능 method
+    /* - 삭제 대상 곡을 곡명 + 앨범명으로 찾음(동일 곡명에 대한 대비) [findSongIndex()호출]
+    * - 곡이 존재하면 배열에서 제거 [removeSong() 호출]
+     */
     public void deleteMusic() {
         if (songCount == 0) {
             System.out.print("삭제할 곡이 없습니다\n입력 후에 시도하세요.");
@@ -199,6 +257,11 @@ public class Playlist {
             removeSong(deleteIdx);
     }
 
+
+    // 특정 index 곡을 제거하는 내부 method
+    /* - 삭제된 자리 기준으로 뒤(뒤 index)의 요소들을 한 칸씩 앞으로 당김
+    * - 마지막 칸 한 칸 앞으로 이동되었으므로 null로 처리
+    * - 저장된 곡 개수(songCount)는 1 감소 시킴*/
     private void removeSong(int deleteIdx){
         /*삭제된 부분을 제외하고 index 한칸씩 앞으로 덮어씌우기*/
         for (int i = deleteIdx; i < songCount - 1; i++) {
@@ -210,6 +273,12 @@ public class Playlist {
         System.out.println("삭제가 완료되었습니다.");
     }
 
+    //조회 기능을 담당하는 method
+    /* - 전체 / 장르 / 가수 / 앨범 기준으로 조회 가능
+    * - 조건에 맞는 song 객체의 정보를 showInfo()로 출력
+    *
+    * song 객체의 실제 데이터는 song(객체 배열)이 가지고 있고,
+    * Playlist는 여러 song 객체 중에서 조건에 맞는 곡을 보여주는 역할*/
     public void searchMenu() {
         if (songCount == 0) {
             System.out.print("조회할 곡이 없습니다\n입력 후에 시도하세요.");
@@ -219,11 +288,13 @@ public class Playlist {
         int searchNum = isValidRangeNumber(1,4);
 
         switch (searchNum) {
+            /*저장된 모든 곡 순서대로 출력*/
             case 1 -> {
                 for (int i = 0; i < songCount; i++) {
                     System.out.println(songs[i].showInfo());
                 }
             }
+            /*입력한 장르와 일치하는 곡만 순서대로 출력 + 입력 검증*/
             case 2 -> {
                 System.out.print("조회할 장르 :");
                 String searchGenre = sc.nextLine();
@@ -240,6 +311,7 @@ public class Playlist {
                     System.out.println("해당 장르의 곡이 없습니다.");
                 }
             }
+            /*입력한 가수와 일치하는 곡만 순서대로 출력 + 입력검증*/
             case 3 -> {
                 System.out.print("조회할 가수 :");
                 String searchSinger = sc.nextLine();
@@ -254,6 +326,7 @@ public class Playlist {
                     System.out.println("해당 가수명의 곡이 없습니다.");
                 }
             }
+            /*입력한 앨범명과 일치하는 곡만 순서대로 출력 + 입력검증*/
             case 4 -> {
                 System.out.print("조회할 앨범 :");
                 String searchAlbum = sc.nextLine();
