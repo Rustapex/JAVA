@@ -5,14 +5,18 @@ import java.util.Scanner;
 
 public class BookMain {
 
-    private       Scanner sc;
-    //= new Scanner(System.in);
-    private  BookStore bookStore; //
+    private Scanner sc = new Scanner(System.in);
+    private BookStore bookStore = new BookStore();
 
-    public BookMain(BookStore bookStore) {
-        this.bookStore = bookStore;
-    }
+    /*private Scanner sc;
+    private BookStore bookStore;
 
+    생성자를 통한 초기화도 가능
+
+    public BookMain() {
+        sc = new Scanner(System.in);
+        bookStore = new BookStore();
+    }*/
 
 
 
@@ -71,7 +75,7 @@ public class BookMain {
 
     private void addBookProcess() {
         boolean isValid = false; //
-        int inputBookCount;
+        int inputBookCount=0;
         int bookCount = bookStore.getBookCount();
 
         while (!isValid) {
@@ -91,7 +95,7 @@ public class BookMain {
                 System.out.printf("1이상 %d 이하의 정상 범위 내의 숫자를 입력하세요.", 120 - inputBookCount);
             }
         }
-        for (int i = 0; i < bookCount; i++) {
+        for (int i = 0; i < inputBookCount; i++) {
             addBooks();
         }
     }
