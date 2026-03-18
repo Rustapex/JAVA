@@ -29,7 +29,5 @@ public class FamilyMain {
             }
             System.out.println();
         }
-
-
     }
 }
