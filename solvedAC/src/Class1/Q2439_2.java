@@ -10,9 +10,10 @@ public class Q2439_2 {
          *   0 1 2 3 4
          * 0         *
          * 1       * *
-         * 2
-         * 3
-         * 4*/
+         * 2     * * *
+         * 3   * * * *
+         * 4 * * * * *
+         * */
 
         for (int i = 1; i <= starCnt; i++) {
             for (int j = 1; j <= starCnt; j++) {
