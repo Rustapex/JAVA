@@ -10,16 +10,18 @@ public class Q2 {
         int evenSum =0;
 
 
-        while(evenCnt <=10){
+        while(evenCnt <10){
             int isEven = sc.nextInt();
             if (isEven ==0){
                 break;
             }
             if(isEven %2 ==0){
-                evenArr[evenCnt] = isEven;
+                evenArr[evenCnt++] = isEven;
                 evenSum += isEven;
-                System.out.println(evenArr[evenCnt++]);
             }
+        }
+        for(int i=0; i<evenCnt; i++){
+            System.out.print(evenArr[i] + " ");
         }
         System.out.printf("짝수의 합 : %d",evenSum);
         sc.close();
