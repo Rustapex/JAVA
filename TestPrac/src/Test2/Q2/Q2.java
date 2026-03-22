@@ -22,5 +22,6 @@ public class Q2 {
             }
         }
         System.out.printf("짝수의 합 : %d",evenSum);
+        sc.close();
     }
 }
