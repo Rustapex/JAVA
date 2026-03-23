@@ -12,6 +12,10 @@ public class Engine {
         this.engineName = engineName;
     }
 
+    public String getEngineName() {
+        return engineName;
+    }
+
     public void start() {
         System.out.println(engineName + " 시동 걸림");
     }

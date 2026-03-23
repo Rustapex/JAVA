@@ -7,5 +7,6 @@ public class Main {
         Car car1 = new Car("소나타", engine1);
 
         car1.drive();
+        System.out.println(car1);
     }
 }

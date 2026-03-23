@@ -6,5 +6,6 @@ public class Main {
         Printer printer = new Printer("삼성 프린터");
 
         person.usePrinter(printer);
+        person.printerModel(printer);
     }
 }

@@ -21,9 +21,15 @@ public class MyUtil {
         }
         System.out.println();
     }
+
     public void executeNTimes(MyCodeRun myCodeRun, int repeatCnt){
         for(int i=0; i<repeatCnt; i++){
             myCodeRun.codeRun();
+        }
+    }
+    public void repeat3Times(Runnable r){
+        for(int i=0 ;i<3; i++){
+            r.run();
         }
     }
 }

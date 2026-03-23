@@ -7,6 +7,10 @@ public class Printer {
         this.model = model;
     }
 
+    public String getModel() {
+        return model;
+    }
+
     public void print() {
         System.out.println(model + "로 출력합니다.");
     }

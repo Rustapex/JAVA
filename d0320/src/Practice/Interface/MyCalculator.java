@@ -15,6 +15,10 @@ public class MyCalculator {
         Calculator cal2 = new SYSCalculator();
         int result = cal2.add(su1,su2);
         System.out.println(result);
+
+        Calculator cal3 = new DWCalculator();
+        int result3 = cal3.add(su1, su2);
+
         int result2 = cal2.sub(su1,su2 );
         System.out.println(result2);
 

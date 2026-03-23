@@ -16,20 +16,15 @@ public class Member implements MyComparable {
 
     @Override
     public int compareTo(Object object) {
-        if (object instanceof Member) {
+        if(object instanceof Member){
             Member member = (Member) object;
-            int resComp;
-
-            if (member.point == this.point) {
-                resComp = 0;
-            } else {
-                resComp = this.point - member.point;
-            }
-            // 비교할 대상이 point가 더 크면 양수, 아니면 음수 반환
-            return resComp;
+            return this.point -member.point;
         }
-//        return object
         return 0;
+
+
+        // 현재 객체의 point 가 비교 객체의 point 보다 크면 양(정렬필요), 아니면 음, 같으면 0
+
     }
 
     @Override
