@@ -12,7 +12,7 @@ public class FileReader_에이콘학생이름2 {
 	
 	public static void main(String[] args) {		
 		try {
-			BufferedReader bf = new BufferedReader( new FileReader("res/acorn.txt"));			
+			BufferedReader bf = new BufferedReader( new FileReader("java/d0324/res/acorn.txt"));
 			while(true) {
 				String data = bf.readLine();
 				if( data == null)break;

@@ -11,7 +11,7 @@ public class 실습FileInputStream2 {
 		
 		//리소스 자동 닫기해주는 문법 
 		
-		try ( FileInputStream fis   = new FileInputStream("res/test.txt")  ){    
+		try ( FileInputStream fis   = new FileInputStream("java/d0324/res/test.txt")  ){
 			
 			int ch  = fis.read();
 			System.out.println( (char) ch);

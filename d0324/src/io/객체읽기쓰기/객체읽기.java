@@ -12,7 +12,7 @@ public class 객체읽기 {
 		// 두 번 읽기
 		
 	 
-			try( ObjectInputStream oi = new ObjectInputStream(  new FileInputStream("res/output10.txt") )){
+			try( ObjectInputStream oi = new ObjectInputStream(  new FileInputStream("java/d0324/res/output10.txt") )){
 				
 				Score  s = (Score)oi.readObject();
 				System.out.println( s);
@@ -23,10 +23,8 @@ public class 객체읽기 {
 				
 				
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		 

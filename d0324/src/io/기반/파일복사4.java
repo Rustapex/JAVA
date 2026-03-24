@@ -4,8 +4,8 @@ import java.io.*;
 
 public class 파일복사4 {
     public static void main(String[] args) {
-    	   String sourceFilePath = "res/ooopg.jpg"; // 원본 파일 경로
-           String targetFilePath = "res/복사본파일이미2지.jpg"; // 복사본 파일 경로
+    	   String sourceFilePath = "java/d0324/res/ooopg.jpg"; // 원본 파일 경로
+           String targetFilePath = "java/d0324/res/복사본파일이미2지.jpg"; // 복사본 파일 경로
           
         ///   String sourceFilePath = "c:\\acorn\\a.txt"; // 원본 파일 경로   절대경로표시할 수 있음
          //  String targetFilePath = "c:\\acorn\\복사본파일2.txt"; // 복사본 파일 경로

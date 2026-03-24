@@ -7,42 +7,36 @@ import java.io.ObjectOutputStream;
 
 public class 객체쓰기 {
 
-	public static void main(String[] args) {
-	 
-		Score s = new Score("홍길동", 100);
-		Score s2 = new Score("김길동",80);
-		
-		
-		ObjectOutputStream  os=null;
-		try {
-			
-			os = new ObjectOutputStream	 ( new FileOutputStream("res/output10.txt"));
-			
-			os.writeObject(s);
-			os.writeObject(s2);
-			os.flush();
-			
-			
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}finally {
-			try {
-				 os.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
- 		
-		}
-	
-		
-		
-		
+    public static void main(String[] args) {
 
-	}
+        Score s = new Score("홍길동", 100);
+        Score s2 = new Score("김길동", 80);
+
+
+        ObjectOutputStream os = null;
+        try {
+
+            os = new ObjectOutputStream(new FileOutputStream("java/d0324/res/output10.txt"));
+
+            os.writeObject(s);
+            os.writeObject(s2);
+            os.flush();
+
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                os.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+
+    }
 
 }

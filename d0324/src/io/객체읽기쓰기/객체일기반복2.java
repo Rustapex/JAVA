@@ -11,7 +11,7 @@ public class 객체일기반복2 {
 	 
 		 
 			 
-				try (ObjectInputStream oi   = new ObjectInputStream(  new FileInputStream("res/test0308.txt"))){
+				try (ObjectInputStream oi   = new ObjectInputStream(  new FileInputStream("java/d0324/res/test0308.txt"))){
 					 
 					while(true) {
 						

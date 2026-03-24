@@ -27,7 +27,7 @@ public class 객체쓰기반복2 {
 	 
 	 
 	 
-		try(ObjectOutputStream oos  = new ObjectOutputStream(new FileOutputStream("res/test0308.txt"))) {
+		try(ObjectOutputStream oos  = new ObjectOutputStream(new FileOutputStream("java/d0324/res/test0308.txt"))) {
 			 
 			
 			for( int i =0 ; i< list.size(); i++) {

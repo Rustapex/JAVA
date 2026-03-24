@@ -8,8 +8,8 @@ public class 파일복사1 {
 	
     public static void main(String[] args) {
     	
-        String sourceFilePath = "res/cute.jpg"; // 원본 파일 경로
-        String targetFilePath = "res/copycute.jpg"; // 복사본 파일 경로
+        String sourceFilePath = "java/d0324/res/gelato.jpg"; // 원본 파일 경로
+        String targetFilePath = "java/d0324/res/gelatoCopy.jpg"; // 복사본 파일 경로
         
         
         try (FileInputStream inputStream = new FileInputStream(sourceFilePath);

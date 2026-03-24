@@ -13,7 +13,7 @@ public class 객체일기반복 {
 		 
 				ObjectInputStream oi=null;
 				try {
-					oi = new ObjectInputStream(  new FileInputStream("res/output10.txt"));
+					oi = new ObjectInputStream(  new FileInputStream("java/d0324/res/output10.txt"));
 					
 					
 					while(true) {

@@ -11,7 +11,7 @@ public class 실습FileInputStream3 {
 		
 		//리소스 자동 닫기해주는 문법 
 		
-		try ( FileInputStream fis   = new FileInputStream("res/test.txt")  ){    
+		try ( FileInputStream fis   = new FileInputStream("java/d0324/res/test.txt")  ){
 			
 			//파일의 끝을 알리는 문자의 아스키코드값  -1
 			while(true) {

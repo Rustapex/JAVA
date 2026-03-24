@@ -14,7 +14,7 @@ public class 실습1 {
 		
 		
 		try {
-			BufferedReader br  = new  BufferedReader ( new FileReader("res/fruit.txt")) ;
+			BufferedReader br  = new  BufferedReader ( new FileReader("java/d0324/res/fruit.txt")) ;
 			
 			/*
 			String result  = br.readLine();

@@ -1,12 +1,10 @@
 package io.기반;
 import java.io.*;
 
-import java.io.*;
-
 public class 파일복사버퍼 {
     public static void main(String[] args) {
-    	 String sourceFilePath = "res/cute.jpg"; // 원본 파일 경로
-         String targetFilePath = "res/cutecopy3.jpg"; // 복사본 파일 경로
+    	 String sourceFilePath = "java/d0324/res/cute.jpg"; // 원본 파일 경로
+         String targetFilePath = "java/d0324/res/cutecopy3.jpg"; // 복사본 파일 경로
          
         
         //성능을 위해서 보조스트림을 사용할 수 있다  

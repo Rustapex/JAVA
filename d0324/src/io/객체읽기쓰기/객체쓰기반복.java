@@ -28,7 +28,7 @@ public class 객체쓰기반복 {
 	 
 	 
 		try {
-			oos  = new ObjectOutputStream(new FileOutputStream("res/scoreList.txt"));
+			oos  = new ObjectOutputStream(new FileOutputStream("java/d0324/res/scoreList.txt"));
 			
 			for( int i =0 ; i< list.size(); i++) {
 				oos.writeObject(list.get(i));

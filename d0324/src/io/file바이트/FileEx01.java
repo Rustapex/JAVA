@@ -14,7 +14,7 @@ public class FileEx01 {
     	//   이 문법은 자동으로 리소스를 해제해 주기 때문에, finally 블록에서 수동으로 close() 메서드를 호출할 필요가 없어서 편리하다
     	
     	
-        try (FileInputStream fis = new FileInputStream("res/test.txt")) {
+        try (FileInputStream fis = new FileInputStream("java/d0324/res/test.txt")) {
             int data1;
 
             

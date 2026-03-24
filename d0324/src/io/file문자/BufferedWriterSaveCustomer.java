@@ -17,7 +17,7 @@ public class BufferedWriterSaveCustomer {
     
 
         // 파일에 저장할 경로
-        String filePath = "res/customerList.txt";
+        String filePath = "java/d0324/res/customerList.txt";
 
         // 학생 정보를 파일에 저장
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {

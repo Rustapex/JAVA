@@ -15,7 +15,7 @@ public class 실습2 {
 		//FileReader 		
 		ArrayList<Student> list  = new ArrayList<>();		
 		try {
-			BufferedReader br  = new  BufferedReader ( new FileReader("res/성적.txt")) ;			
+			BufferedReader br  = new  BufferedReader ( new FileReader("java/d0324/res/성적.txt")) ;
 			/*
 			String result  = br.readLine();
 			System.out.println( result);

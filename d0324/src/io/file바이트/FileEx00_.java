@@ -14,7 +14,7 @@ public class FileEx00_ {
 		
 		    FileInputStream fis= null; 
 		 
-			fis = new FileInputStream("res/test.txt");
+			fis = new FileInputStream("java/d0324/res/test.txt");
 			
 			int data1=fis.read();
 			System.out.println( (char)data1);

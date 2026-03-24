@@ -15,8 +15,8 @@ public class 파일복사버퍼2 {
     	  
         long startTime = System.currentTimeMillis(); // 시작 시간 측정
         
-        try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream("res/cute.jpg"));
-             BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("res/cuteCopy2.jpg"))) {
+        try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream("java/d0324/res/cute.jpg"));
+             BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("java/d0324/res/cuteCopy2.jpg"))) {
 
             byte[] buffer = new byte[1024]; // 1KB 버퍼
             int bytesRead;

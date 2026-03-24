@@ -18,12 +18,11 @@ public class 객체쓰기읽기 {
 
 		ObjectOutputStream oos=null;		 
 		try {
-			oos  = new ObjectOutputStream(new FileOutputStream("res/scoreoutput.txt"));
+			oos  = new ObjectOutputStream(new FileOutputStream("java/d0324/res/scoreoutput.txt"));
 			oos.writeObject(list.get(0));			
 			oos.close();
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 			
@@ -36,15 +35,13 @@ public class 객체쓰기읽기 {
 		
 		ObjectInputStream ois = null;	 
 		try {
-			ois = new ObjectInputStream(new FileInputStream("res/scoreoutput.txt"));
+			ois = new ObjectInputStream(new FileInputStream("java/d0324/res/scoreoutput.txt"));
 			Score score  = (Score)ois.readObject();
 			System.out.println( score);
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

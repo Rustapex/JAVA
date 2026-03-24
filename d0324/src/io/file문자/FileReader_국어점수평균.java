@@ -11,7 +11,7 @@ public class FileReader_국어점수평균 {
 	 
 		
 		try {
-			BufferedReader bf = new BufferedReader( new FileReader("res/kor.txt"));
+			BufferedReader bf = new BufferedReader( new FileReader("java/d0324/res/kor.txt"));
 			
 			int sum=0;
 			double avg;

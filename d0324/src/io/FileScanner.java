@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class FileScanner {
     public static void main(String[] args) {
         // 파일 경로 설정
-        String filePath = "res/acorns.txt";
+        String filePath = "java/d0324/res/acorns.txt";
 
         try {
             // Scanner를 사용하여 파일에 직접 연결

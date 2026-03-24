@@ -14,7 +14,7 @@ public class FileEx00 {
 		//기반스트림
 		FileInputStream fis= null; 
 		try {
-			 fis = new FileInputStream("res/test.txt");
+			 fis = new FileInputStream("java/d0324/res/test.txt");
 			
 			int data1=fis.read();
 			System.out.println( (char)data1);

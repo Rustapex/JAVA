@@ -12,7 +12,7 @@ public class FileEx02 {
 		FileInputStream fis=null;
 		try {
 			//데이터가 들어오는 길(통로)을 얻어온 것 !!!!
-			fis = new FileInputStream("res/test.txt");
+			fis = new FileInputStream("java/d0324/res/test.txt");
 			/*
 			int su;
 			su=fis.read();

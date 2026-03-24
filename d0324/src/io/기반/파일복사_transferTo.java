@@ -1,7 +1,6 @@
 package io.기반;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -14,8 +13,8 @@ public class 파일복사_transferTo {
 			FileOutputStream fos = null; 
 		
 	 
-			fis = new FileInputStream( "res/cute.jpg");
-			fos  = new FileOutputStream("res/cuteCopy3.jpg"); 
+			fis = new FileInputStream("java/d0324/res/cute.jpg");
+			fos  = new FileOutputStream("java/d0324/res/cuteCopy3.jpg");
 		 
 			fis.transferTo(fos);
 			

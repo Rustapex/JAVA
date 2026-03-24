@@ -11,7 +11,7 @@ public class FileWriterEx {
 			//기반스트림 얻어오기
 			//파일 문자기반 쓰기
 			
-			FileWriter w = new FileWriter("res/output3.txt");
+			FileWriter w = new FileWriter("java/d0324/res/output3.txt");
 			w.write("안녕하세요");
 			w.write( "파일쓰기가 되어요 !");	
 			w.flush();

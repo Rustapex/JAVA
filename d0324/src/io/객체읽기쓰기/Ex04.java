@@ -12,7 +12,7 @@ public class Ex04 {
     }
 
     private static void writeObjectToFile() {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("res/studentss.dat"))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("java/d0324/res/studentss.dat"))) {
             // 객체 생성 및 파일에 쓰기
             Score2 student1 = new Score2("스티브잡스", 85, 90, 78);
             Score2 student2 = new Score2("빌게이츠", 92, 88, 95);
@@ -31,7 +31,7 @@ public class Ex04 {
     private static void readObjectFromFile() {
         try {
             // 파일에서 객체 읽기
-        	  ObjectInputStream ois = new ObjectInputStream(new FileInputStream("res/studentss.dat")) ;
+        	  ObjectInputStream ois = new ObjectInputStream(new FileInputStream("java/d0324/res/studentss.dat")) ;
             while (true) {
                 try {
                     Score2 student = (Score2) ois.readObject();

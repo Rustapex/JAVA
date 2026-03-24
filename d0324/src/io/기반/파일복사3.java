@@ -1,5 +1,4 @@
 package io.기반;
-import java.io.*;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -7,8 +6,8 @@ import java.io.IOException;
 
 public class 파일복사3 {
     public static void main(String[] args) {
-        String sourceFilePath = "res/cute.jpg"; // 원본 파일 경로
-        String targetFilePath = "res/cutecopy2.jpg"; // 복사본 파일 경로
+        String sourceFilePath = "java/d0324/res/cute.jpg"; // 원본 파일 경로
+        String targetFilePath = "java/d0324/res/cutecopy2.jpg"; // 복사본 파일 경로
         
         // 절대 경로를 사용할 경우 주석을 해제하여 사용 가능 
         

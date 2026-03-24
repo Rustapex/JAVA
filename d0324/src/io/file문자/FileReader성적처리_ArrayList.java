@@ -12,7 +12,7 @@ public class FileReader성적처리_ArrayList{
 
         try {
             // 파일에서 성적 읽어오기
-            BufferedReader reader = new BufferedReader(new FileReader("res/성적파일.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("java/d0324/res/성적파일.txt"));
 
             String line;
             while ((line = reader.readLine()) != null) {

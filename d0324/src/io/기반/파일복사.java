@@ -19,8 +19,8 @@ public class 파일복사 {
 		
 		
 		try {
-			  fis = new FileInputStream( "res/img.jpg");
-			  fos  = new FileOutputStream("res/박수경이미지.jpg");
+			  fis = new FileInputStream("java/d0324/res/img.jpg");
+			  fos  = new FileOutputStream("java/d0324/res/박수경이미지.jpg");
 			
 			
 			//반복문  (파일의 끝  -1) 

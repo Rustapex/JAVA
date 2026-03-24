@@ -9,7 +9,7 @@ public class 실습4 {
 
     public static void main(String[] args) {
 
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("res/학생.txt"))) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("java/d0324/res/학생.txt"))) {
             
             while (true) {  // 더 읽을 내용이 없으면 EOFException 발생
                 try {

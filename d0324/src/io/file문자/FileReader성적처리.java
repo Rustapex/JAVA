@@ -10,12 +10,12 @@ public class FileReader성적처리 {
     public static void main(String[] args) {
         try {
             // 파일에서 성적 읽어오기
-            BufferedReader reader = new BufferedReader(new FileReader("res/성적파일.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("java/d0324/res/성적파일.txt"));
 
             String line;
             while ((line = reader.readLine()) != null) {
                 // 콤마로 구분된 문자열을 분리하여 이름과 점수를 얻음
-                String[] data = line.split(",");
+                String[] data = line.split(","); //name,score, score,score
                 
                 // 첫 번째 요소는 이름, 나머지는 점수
                 String name = data[0];

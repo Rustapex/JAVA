@@ -21,7 +21,7 @@ public class 실습1 {
 		ObjectOutputStream oos =null;
 		
 		try {
-			 oos  = new ObjectOutputStream( new FileOutputStream("res/학생.txt"));		
+			 oos  = new ObjectOutputStream( new FileOutputStream("java/d0324/res/학생.txt"));
 			 
 			oos.writeObject(s);			 
 			oos.writeObject(s2);			

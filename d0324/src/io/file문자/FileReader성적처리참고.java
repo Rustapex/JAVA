@@ -3,15 +3,12 @@ package io.file문자;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 
 public class FileReader성적처리참고 {
     public static void main(String[] args) {
         try {
             // 파일에서 성적 읽어오기
-            BufferedReader reader = new BufferedReader(new FileReader("res/성적파일.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("java/d0324/res/성적파일.txt"));
 
             String line;
             while ((line = reader.readLine()) != null) {

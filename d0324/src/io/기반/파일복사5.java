@@ -6,8 +6,8 @@ import java.io.IOException;
 
 public class 파일복사5 {
     public static void main(String[] args) {
-        String sourceFilePath = "res/cute.jpg"; // 원본 파일 경로
-        String targetFilePath = "res/복사본파일이미지3.jpg"; // 복사본 파일 경로
+        String sourceFilePath = "java/d0324/res/cute.jpg"; // 원본 파일 경로
+        String targetFilePath = "java/d0324/res/복사본파일이미지3.jpg"; // 복사본 파일 경로
         
         
         try (FileInputStream is = new FileInputStream(sourceFilePath);

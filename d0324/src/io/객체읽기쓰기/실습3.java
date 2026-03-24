@@ -14,7 +14,7 @@ public class 실습3 {
 		//
 		ObjectInputStream ois=null;
 		try {
-			  ois  = new ObjectInputStream (  new FileInputStream( "res/학생.txt")); 
+			  ois  = new ObjectInputStream (  new FileInputStream("java/d0324/res/학생.txt"));
 				
 				 
 					

@@ -12,7 +12,7 @@ public class FileReader에이콘학생이름 {
 		FileReader fis;
 
 		try {
-			fis = new FileReader("res/acorn2.txt");
+			fis = new FileReader("java/d0324/res/acorn2.txt");
 			int data = fis.read();
 			System.out.println((char) data);
 			

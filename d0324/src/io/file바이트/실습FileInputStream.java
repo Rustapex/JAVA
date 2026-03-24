@@ -10,7 +10,7 @@ public class 실습FileInputStream {
 		 
 		FileInputStream fis =null;
 		try {
-			  fis  = new FileInputStream("res/test.txt");   // FileNotFoundException  , IOException
+			  fis  = new FileInputStream("java/d0324/res/test.txt");   // FileNotFoundException  , IOException
 			
 			int ch  = fis.read();
 			System.out.println( (char) ch);
