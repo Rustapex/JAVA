@@ -4,8 +4,7 @@ public class RaceConditionDemo {
     static class Counter{
         int count =0;
         public void increase(){
-            count++; // 공유 자원 문제 가능
-        }
+            count++;} // 공유 자원 문제 가능
     }
     public static void main(String[] args) throws InterruptedException {
         Counter counter = new Counter();

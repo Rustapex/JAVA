@@ -53,5 +53,4 @@ public class Ex02 {
 
         System.out.println("프로그램 종료");
     }
-
 }
