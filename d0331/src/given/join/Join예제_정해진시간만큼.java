@@ -22,7 +22,7 @@ public  class Join예제_정해진시간만큼 {
 		// main이 가다려주기 , Counter스레드가 종료되기를
 		try {
 			//counter.join( 3000);  // 시간을 정할 수 있다.
-			 counter.join(  );  //  기다리기
+			 counter.join(3000  );  //  기다리기
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
