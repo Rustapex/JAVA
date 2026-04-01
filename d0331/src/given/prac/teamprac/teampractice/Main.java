@@ -23,7 +23,7 @@ public class Main {
 
 		for(int i = 0; i < 3; i++) {
 
-			// ⭐ 여기서 문제 하나씩 출력
+			//  여기서 문제 하나씩 출력
 			System.out.println((i + 1) + ". " + quiz[i]);
 			
 			System.out.print("답 입력: ");

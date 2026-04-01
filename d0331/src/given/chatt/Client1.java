@@ -22,7 +22,7 @@ public class Client1 {
 		// 127.0.0.1  ( localhost) 
 		
 		try {
-			socket = new Socket("localhost", 6100);
+			socket = new Socket("192.168.100.174", 6100); //서버 입장이면 host에 ip를 넣음 문자열로,
 			dataInputStream = new DataInputStream( socket.getInputStream());
 			dataOutputStream = new DataOutputStream ( socket.getOutputStream());	
 			
@@ -33,10 +33,8 @@ public class Client1 {
 			dataRecv();			
 
 		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -52,7 +50,6 @@ public class Client1 {
 			String msg= dataInputStream.readUTF();
 			System.out.println( msg);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}		
 	}
@@ -65,7 +62,6 @@ public class Client1 {
 			String sendMsg  = sc.nextLine();
 			dataOutputStream.writeUTF(sendMsg);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 		 

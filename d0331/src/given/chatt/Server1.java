@@ -49,7 +49,6 @@ public class Server1 {
 			String message  = in.nextLine();
 			dataOutputStream.writeUTF(message);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

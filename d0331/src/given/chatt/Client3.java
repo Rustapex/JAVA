@@ -32,10 +32,8 @@ public class Client3 {
 			
 
 		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -101,7 +99,6 @@ public class Client3 {
 						dataOutputStream.writeUTF(sendMsg);
 						 
 					} catch (IOException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 						break;
 					}

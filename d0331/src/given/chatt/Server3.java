@@ -38,7 +38,6 @@ public class Server3 {
 			 dataSend();
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		 
@@ -109,7 +108,6 @@ public class Server3 {
 						dataOutputStream.writeUTF(sendMsg);
 					}
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				
